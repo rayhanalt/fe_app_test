@@ -1,6 +1,6 @@
 # fe_app
 
-A new Flutter project.
+Aplikasi yang dibuat berdasarkan test dari PT ILCS.
 
 ## Getting Started
 
