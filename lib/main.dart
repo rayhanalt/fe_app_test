@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
     // Fetch additional details based on the selected Negara
     selectedCountryCode = suggestion.kdNegara;
     // Setel nilai controller untuk negara
-    _negaraController.text = '${suggestion.kdNegara} - ${suggestion.urNegara}';
+    _negaraController.text = suggestion.urNegara;
 
     List<Negara> result = await ApiService.fetchData(suggestion.kdNegara);
     print('Details: $result');
@@ -58,8 +58,7 @@ class _MyAppState extends State<MyApp> {
     print(
         'Selected Pelabuhan: ${suggestion.kdPelabuhan} - ${suggestion.urPelabuhan}');
     // Setel nilai controller untuk pelabuhan
-    _pelabuhanController.text =
-        '${suggestion.kdPelabuhan} - ${suggestion.urPelabuhan}';
+    _pelabuhanController.text = suggestion.urPelabuhan;
     // Fetch additional details based on the selected Pelabuhan
     List<Pelabuhan> result = await ApiService.fetchPelabuhan(
         suggestion.kdPelabuhan, suggestion.urPelabuhan);
